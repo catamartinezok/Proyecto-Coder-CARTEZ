@@ -1,0 +1,27 @@
+.proyectos{
+    section{
+        display: flex;
+        div{
+            width: 65%;
+            p{
+                font-weight: 300;
+                font-size: 16px;
+                color: $color-texto-default;
+            }
+            button{
+                align-items: center;
+                font-weight: 600;
+                font-size: 14px;
+                background-color: $color-secundario;
+                color: $color-texto-contraste;
+                border-radius: 6px;
+                border: 0px;
+                padding: 6px;
+                width: 140px;
+            }
+        }
+        img{
+            width: 35%;
+        }
+    }
+}

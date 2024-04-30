@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*Ajustes por defecto*/
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins';
+box-sizing: border-box;
+}
+
+/*generales main*/
+main{
+    margin:20px;
+    h1{
+        color: $color-principal;
+        font-weight: 900;
+        font-size: 40px;
+    }
+    h2{
+        color: $color-principal;
+        font-weight: 800;
+        font-size: 24px;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+/*Modificaciones de bootstrap*/
+/*-Header-*/
+.navbar-brand img{
+    height: 60px;
+    margin-right: 60px;
+}
+.navbar-color{
+    background-color: $color-principal;
+}
+.nav-link{
+    color: $color-texto-contraste;
+    font-weight: 700;
+    font-size: 20px;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-toggler-icon{
+    color: $color-texto-contraste;
+}
+/*-Institucional-*/
+.card-img-top{
+    height: 100%;
+    object-fit: cover;
+}
+.presidente{
+    height: 100%;
+}
+.card-title{
+    font-weight: 800;
+    color: $color-principal;
+}
+.card-text{
+    font-weight: 400;
+    color: $color-texto-default;    
+}
+.card-invisible{
+    visibility: hidden;
+}
+
+/*Mixins*/
+@mixin grid($grid,$columns,$rows,$column-gap,$row-gap,$template-areas){
+    display:$grid;
+    grid-template-columns: $columns;
+    grid-template-rows:$rows;
+    column-gap: $column-gap;
+    row-gap: $row-gap;
+    grid-template-areas: $template-areas;
+}
+
+/*Extends*/
+%flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}

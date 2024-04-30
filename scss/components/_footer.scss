@@ -1,0 +1,76 @@
+.grid-container{
+    @include grid(grid,repeat(3, 1fr), 80% 20%, 5px, 0px,"datos center ubicacion"
+    "derechos derechos derechos");
+    background-color: $color-secundario;
+    color: $color-texto-contraste;
+    .datos{
+        grid-area: datos;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        img{
+            height: 50px;
+            width: 135px;
+        }
+        div{
+            @extend %flex-wrap;
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+            a{
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+    }
+    .center{
+        grid-area: center;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        h3{
+            font-weight: 700;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        ul{
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    font-size: 10 px;
+                    font-weight: 500;
+                    color: $color-texto-contraste;
+                }
+            }
+        }
+    }
+    .ubicacion{
+        grid-area: ubicacion;
+        @extend %flex-wrap;
+        flex-direction: column;
+        align-content: space-around;
+        margin: 5px;
+        iframe{
+            margin: 5px 0px 5px 0px;
+        }
+        p{
+            font-size: 10 px;
+            font-weight: 500;
+            color: $color-texto-contraste;
+        }
+    }
+    .derechos{
+        grid-area: derechos;
+        @extend %flex-wrap;
+        justify-content: center;
+        height: 50px;
+        p{
+            font-size: 10 px;
+            font-weight: 500;
+            color: $color-texto-contraste;
+        }
+    }
+}

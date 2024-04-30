@@ -46,9 +46,7 @@ main h2{
     font-weight: 800;
     font-size: 24px;
 }
-main section{
-    margin: 10px 0px 10px 0px;
-}
+
 main img{
     width: 100%;
 }
@@ -116,188 +114,29 @@ main img{
     width: 24px;
 }
 /*institucional*/
-.main section p{
+main section p{
     font-weight: 300;
     font-size: 16px;
     color: black;
 }
-.grid-container2{
-    display: grid;
-    grid-template-rows: 10% 30% 30% 30%;
-    grid-template-columns: 5% 30% 30% 30% 5%;
-    grid-template-areas: 
-    "title title title title title"
-    ". presidente vice1 vice2 ."
-    ". secretario prosecretario gremial . "
-    ". tesorero . protesorero .";
-}
-.title{
-    grid-area: title;
-    height: 50px;
-    display: flex;
+.card-img-top{
+    height: 100%;
+    object-fit: cover;
 }
 .presidente{
-    grid-area: presidente;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+    height: 100%;
 }
-.presidente h3{
-    font-weight: 600;
-    font-size: 16px;
+.card-title{
+    font-weight: 800;
     color: #147043;
 }
-.presidente h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
+.card-text{
+    font-weight: 400;
+    color: black;    
 }
-.presidente img{
-    width: 200px;
-    height: 200px;
+.card-invisible{
+    visibility: hidden;
 }
-.vice-primero{
-    grid-area: vice1;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.vice-primero h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.vice-primero h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.vice-primero img{
-    width: 200px;
-    height: 200px;
-}
-.vice-segundo{
-    grid-area: vice2;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    align-content: center;
-}
-.vice-segundo h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.vice-segundo h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.vice-segundo img{
-    width: 200px;
-    height: 200px;
-}
-.secretario{
-    grid-area: secretario;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.secretario h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.secretario h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.secretario img{
-    width: 200px;
-    height: 200px;
-}
-.pro-secretario{
-    grid-area: prosecretario;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.pro-secretario h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.pro-secretario h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.pro-secretario img{
-    width: 200px;
-    height: 200px;
-}
-.gremial{
-    grid-area: gremial;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.gremial h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.gremial h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.gremial img{
-    width: 200px;
-    height: 200px;
-}
-.tesorera{
-    grid-area: tesorero;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.tesorera h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.tesorera h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.tesorera img{
-    width: 200px;
-    height: 200px;
-}
-.pro-tesorero{
-    grid-area: protesorero;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.pro-tesorero h3{
-    font-weight: 600;
-    font-size: 16px;
-    color: #147043;
-}
-.pro-tesorero h4{
-    font-weight: 300;
-    font-size: 14px;
-    color: black;
-}
-.pro-tesorero img{
-    width: 200px;
-    height: 200px;
-}
-
 .ateneos{
     display: flex;
     flex-wrap: wrap;
@@ -316,6 +155,7 @@ main img{
 .entidades div{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .entidades div a h3{
 font-size: 16px;
@@ -389,16 +229,7 @@ margin: 10px;
     width: 140px;
 }
 /*novedades*/
-.portales div{
-    display: flex;
-    justify-content: flex-start;
-}
-.portales div a h3{
-font-size: 16px;
-font-weight: 600;
-color: black;
-margin: 10px;
-}
+
 .editoriales{
     display: flex;
     flex-wrap: wrap;
@@ -426,6 +257,17 @@ margin: 10px;
 .editoriales div a img{
     width: 24px;
     height: 24px;
+}
+.portales div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.portales div a h3{
+font-size: 16px;
+font-weight: 600;
+color: black;
+margin: 10px;
 }
 /*----footer----*/
 
@@ -549,7 +391,10 @@ margin: 10px;
         justify-content: flex-start;
     }
     .center{
-        padding: 10px;
+        padding: 8px;
+    }
+    .center ul li a{
+        font-size: 8 px;
     }
     .ubicacion{
         justify-content:center;
@@ -614,12 +459,12 @@ margin: 10px;
             padding: 5px;
         }
         .datos img{
-            height: 30px;
-            width: 81px;
+            height: 38px;
+            width: 103px;
         }
         .datos div a img{
-            height: 35px;
-            width: 35px;
+            height: 40px;
+            width: 40px;
         }
         .center{
             padding: 5px;
@@ -637,5 +482,6 @@ margin: 10px;
         }
         .derechos p{
             padding-top: 5px;
+            font-size: 12px;
         }
 }

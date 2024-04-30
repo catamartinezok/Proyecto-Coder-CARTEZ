@@ -1,0 +1,64 @@
+main{
+    .grid-container3{
+        @include grid(grid,0.5fr 1fr, 1fr, 0px, 0px,none);
+        .video{
+            iframe{
+                width: 560px;
+                height: 315px;
+            }
+        }
+        .texto{
+            flex-direction: column;
+            margin-left: 20px;
+            @extend %flex-wrap;
+            p{
+                font-weight: 300;
+                font-size: 16px;
+                color: $color-texto-default;
+            }
+            button{
+                font-weight: 600;
+                font-size: 16px;
+                background-color: $color-secundario;
+                color: $color-texto-contraste;
+                border-radius: 6px;
+                border: 0px;
+                padding: 10px;
+                width: 180px;
+            }
+        }
+    }
+    .novedades{
+        @extend %flex-wrap;
+        flex-direction: column;
+        div{
+            @extend %flex-wrap;
+            justify-content: space-around;
+            div{
+                border: 0px;
+                background-color: $color-principal;
+                width: 300px;
+                height: 340px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                img{
+                    width: 300px;
+                    height: 200px;
+                }
+                h3{
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $color-texto-contraste;
+                    padding: 10px;
+                }
+                a{
+                    img{
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

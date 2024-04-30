@@ -1,0 +1,39 @@
+main{
+    section{
+        p{
+            font-weight: 300;
+            font-size: 16px;
+            color: $color-texto-default;
+        }
+    }
+    section{
+        .ateneos{
+            @extend %flex-wrap;
+            button{
+                font-weight: 600;
+                font-size: 14px;
+                background-color: $color-secundario;
+                color: $color-texto-contraste;
+                border-radius: 6px;
+                border: 0px;
+                padding: 6px;
+                width: 140px;
+                margin: 10px;
+            }
+        }
+    }
+    .entidades{
+        div{
+            @extend %flex-wrap;
+            justify-content: flex-start;
+            a{
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $color-texto-default;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}

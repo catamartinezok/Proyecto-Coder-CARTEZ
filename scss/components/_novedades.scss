@@ -1,0 +1,47 @@
+main{
+    section{
+        .editoriales{
+            @extend %flex-wrap;
+            div{
+                border: 0px;
+                background-color: $color-principal;
+                width: 300px;
+                height: 410px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 5px;
+                img{
+                    height: 300px;
+                    width: 300px;
+                }
+                h3{
+                    color: $color-texto-contraste;
+                    font-weight: 600;
+                    font-size: 16px;
+                    padding: 10px;
+                }
+                .boton{
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .portales{
+        div{
+            @extend %flex-wrap;
+            justify-content: flex-start;
+            a{
+                h3{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $color-texto-default;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}

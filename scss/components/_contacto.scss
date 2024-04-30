@@ -1,0 +1,44 @@
+main{
+    .contacto{
+        display: flex;
+        justify-content: space-between;
+        .formulario{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            p{
+                font-weight: 300;
+                font-size: 16px;
+                color: $color-texto-default;
+            }
+            form{
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                    label{
+                        font-weight: 300;
+                        font-size: 16px;
+                        color: $color-texto-default;
+                        margin-bottom: 5px;
+                    }
+                    .button{
+                        font-weight: 600;
+                        font-size: 14px;
+                        background-color: $color-secundario;
+                        color: $color-texto-contraste;
+                        border-radius: 6px;
+                        border: 0px;
+                        padding: 6px;
+                        width: 140px;
+                    }
+                }
+            }
+        }
+        .imagen{
+            img{
+                width: 300px;
+            }
+        }
+    }
+}

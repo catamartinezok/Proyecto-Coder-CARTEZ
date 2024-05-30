@@ -1,17 +1,27 @@
 main{
+    h1{
+        margin: 20px;
+    }
     .contacto{
         display: flex;
         justify-content: space-between;
         .formulario{
-            width: 600px;
+            width: 70%;
             display: flex;
             flex-direction: column;
+            margin: 20px;
+            h2{
+                align-self: flex-start;
+                margin: 10px 0px;
+            }
             p{
                 font-weight: 300;
                 font-size: 16px;
                 color: $color-texto-default;
+                width: 600px;
             }
             form{
+                width: 600px;
                 div{
                     display: flex;
                     flex-direction: column;
@@ -31,13 +41,20 @@ main{
                         border: 0px;
                         padding: 6px;
                         width: 140px;
+                        transition-duration: 0.5s;
+                        &:hover{
+                        background-color: $color-principal;
+                        }
                     }
                 }
             }
         }
         .imagen{
+            width: 29%;
+            margin-right: 20px;
             img{
-                width: 300px;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }

@@ -1,45 +1,106 @@
 main{
+    .nov-title{
+        background-color: $color-principal;
+        color: $color-texto-contraste;
+        font-weight: 800;
+        font-size: 40px;
+        @extend %flex-wrap;
+        justify-content: center;
+        padding: 50px 0px 50px 0px;
+        margin: 3px 0px 0px 0px;
+    }
     section{
+        margin: 20px 0px;
+        h2{
+            margin: 20px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 30px;
+        }
         .editoriales{
             @extend %flex-wrap;
+            justify-content: space-around;
+            margin: 20px;
             div{
                 border: 0px;
                 background-color: $color-principal;
-                width: 300px;
-                height: 410px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                margin: 5px;
+                border-radius: 15px;
+                width: 320px;
+                height: 320px;
+                position: relative;
+                margin: 10px;
+                transition-timing-function: ease-in;
+                transition-duration: 1s;
                 img{
-                    height: 300px;
-                    width: 300px;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
                 }
                 h3{
                     color: $color-texto-contraste;
                     font-weight: 600;
                     font-size: 16px;
-                    padding: 10px;
+                    padding: 37px 10px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $color-principal;
+                    width: 100%;
+                    height: 90px;
+                    margin: 0;
+                    border-radius: 0px 0px 15px 15px ;
                 }
-                .boton{
+                a{
                     img{
-                        width: 24px;
-                        height: 24px;
+                        height: 40px;
+                        width: 40px;
+                        background-color: $color-principal;
+                        position: absolute;
+                        bottom: 25px;
+                        right: 10px;
                     }
+                }
+                &:hover{
+                    transform: scale(1.1);
+                    -webkit-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
                 }
             }
         }
     }
     .portales{
+        background-color: $color-secundario;
+        border-radius: 15px;
+        margin: 20px;
+        padding: 20px 0px;
+        -webkit-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+        h2{
+            color: $color-texto-contraste;
+            margin-bottom: 30px;
+        }
         div{
             @extend %flex-wrap;
-            justify-content: flex-start;
+            justify-content: center;
+            margin: 10px;
             a{
+                text-decoration: none;
                 h3{
                     font-size: 16px;
                     font-weight: 600;
-                    color: $color-texto-default;
+                    color: $color-texto-contraste;
                     margin: 10px;
+                    transition-timing-function: ease-in;
+                    transition-duration: 1s;
+                    &:hover{
+                    transform: scale(1.1);
+                    color: $color-principal;
+                    -webkit-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    }
                 }
             }
         }

@@ -10,18 +10,18 @@
   box-sizing: border-box; }
 
 /*generales main*/
-main {
-  margin: 20px; }
-  main h1 {
-    color: #147043;
-    font-weight: 900;
-    font-size: 40px; }
-  main h2 {
-    color: #147043;
-    font-weight: 800;
-    font-size: 24px; }
-  main img {
-    width: 100%; }
+main h1 {
+  color: #147043;
+  font-weight: 800;
+  font-size: 40px; }
+
+main h2 {
+  color: #147043;
+  font-weight: 800;
+  font-size: 24px; }
+
+main img {
+  width: 100%; }
 
 /*Modificaciones de bootstrap*/
 /*-Header-*/
@@ -43,48 +43,50 @@ main {
 .navbar-toggler-icon {
   color: white; }
 
-/*-Institucional-*/
-.card-img-top {
-  height: 100%;
-  object-fit: cover; }
-
-.presidente {
-  height: 100%; }
-
-.card-title {
-  font-weight: 800;
-  color: #147043; }
-
-.card-text {
-  font-weight: 400;
-  color: black; }
-
-.card-invisible {
-  visibility: hidden; }
+/*Index*/
+.intro .carousel-inner {
+  width: 100%;
+  height: 600px;
+  background-color: #147043; }
 
 /*Mixins*/
 /*Extends*/
-main .grid-container3 .texto, main .novedades, main .novedades div, main section .ateneos, main .entidades div, main section .editoriales, main .portales div, .grid-container .datos div, .grid-container .ubicacion, .grid-container .derechos {
+main .title-index, main .grid-container3 .texto, main .novedades, main .novedades div, .institucional section, .institucional div .ateneos, .institucional .entidades div, .proyectos h1, main .nov-title, main section .editoriales, main .portales div, .grid-container .datos div, .grid-container .ubicacion, .grid-container .derechos {
   display: flex;
   flex-wrap: wrap; }
 
+main .title-index {
+  background-color: #147043;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+  justify-content: center;
+  padding: 50px 0px 50px 0px;
+  margin: 0px; }
+
 main .grid-container3 {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   column-gap: 0px;
   row-gap: 0px;
-  grid-template-areas: none; }
+  grid-template-areas: none;
+  margin: 20px; }
   main .grid-container3 .video iframe {
     width: 560px;
     height: 315px; }
   main .grid-container3 .texto {
     flex-direction: column;
-    margin-left: 20px; }
+    margin-left: 20px;
+    justify-content: center; }
+    main .grid-container3 .texto h2 {
+      text-align: start;
+      margin: 0px 0px 10px 0px; }
     main .grid-container3 .texto p {
       font-weight: 300;
       font-size: 16px;
-      color: black; }
+      color: black;
+      margin-bottom: 10px; }
     main .grid-container3 .texto button {
       font-weight: 600;
       font-size: 16px;
@@ -93,38 +95,140 @@ main .grid-container3 {
       border-radius: 6px;
       border: 0px;
       padding: 10px;
-      width: 180px; }
+      width: 180px;
+      transition-duration: 0.5s; }
+      main .grid-container3 .texto button:hover {
+        background-color: #147043; }
 
 main .novedades {
   flex-direction: column; }
+  main .novedades h2 {
+    align-self: center;
+    margin: 20px;
+    color: #147043;
+    font-weight: 800;
+    font-size: 40px; }
   main .novedades div {
-    justify-content: space-around; }
+    justify-content: space-around;
+    margin: 20px; }
     main .novedades div div {
       border: 0px;
       background-color: #147043;
-      width: 300px;
-      height: 340px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; }
+      border-radius: 15px;
+      width: 320px;
+      height: 280px;
+      position: relative;
+      transition-timing-function: ease-in;
+      transition-duration: 1s; }
       main .novedades div div img {
-        width: 300px;
-        height: 200px; }
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px; }
       main .novedades div div h3 {
         font-weight: 600;
         font-size: 16px;
         color: white;
-        padding: 10px; }
+        padding: 22px 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #147043;
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        border-radius: 0px 0px 15px 15px; }
       main .novedades div div a img {
-        height: 24px;
-        width: 24px; }
+        height: 40px;
+        width: 40px;
+        background-color: #147043;
+        position: absolute;
+        bottom: 10px;
+        right: 10px; }
+      main .novedades div div:hover {
+        transform: scale(1.1);
+        -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
 
-main section p {
-  font-weight: 300;
-  font-size: 16px;
-  color: black; }
+.institucional section {
+  background-color: #147043;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3px; }
+  .institucional section h1 {
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
+    padding: 50px 0px 30px 0px;
+    margin: 0;
+    text-align: center; }
+  .institucional section h2 {
+    color: white; }
+  .institucional section p {
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    padding: 16px 30px;
+    text-align: center;
+    margin: 0; }
 
-main section .ateneos button {
+.institucional h2 {
+  margin: 20px; }
+
+.institucional .mesaejecutiva-grid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: repeat(3, 280px);
+  gap: 20px; }
+  .institucional .mesaejecutiva-grid div {
+    grid-column: span 1;
+    grid-row: span 1;
+    justify-self: center;
+    border: 0px;
+    background-color: #147043;
+    border-radius: 15px;
+    width: 320px;
+    height: 280px;
+    position: relative;
+    transition-duration: 1s;
+    transition-timing-function: ease-in; }
+    .institucional .mesaejecutiva-grid div:hover {
+      transform: scale(1.1);
+      -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
+    .institucional .mesaejecutiva-grid div img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px; }
+    .institucional .mesaejecutiva-grid div div {
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #147043;
+      opacity: 0.8;
+      width: 100%;
+      height: 74px;
+      margin: 0;
+      border-radius: 0px 0px 15px 15px; }
+      .institucional .mesaejecutiva-grid div div h3 {
+        font-weight: 800;
+        font-size: 16px;
+        color: white; }
+      .institucional .mesaejecutiva-grid div div p {
+        font-weight: 400;
+        font-size: 12px;
+        color: white;
+        margin-bottom: 8px; }
+  .institucional .mesaejecutiva-grid .card-invisible {
+    grid-column: span 1;
+    grid-row: span 1;
+    border: 0px;
+    visibility: hidden; }
+
+.institucional div .ateneos button {
   font-weight: 600;
   font-size: 14px;
   background-color: #00bd45;
@@ -133,58 +237,88 @@ main section .ateneos button {
   border: 0px;
   padding: 6px;
   width: 140px;
-  margin: 10px; }
+  margin: 10px;
+  transition-duration: 0.5s; }
+  .institucional div .ateneos button:hover {
+    background-color: #147043; }
 
-main .entidades div {
-  justify-content: flex-start; }
-  main .entidades div a h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
+.institucional .entidades {
+  background-color: #00bd45;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px 0px;
+  -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
+  .institucional .entidades h2 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center; }
+  .institucional .entidades div {
+    justify-content: center;
     margin: 10px; }
-
-.proyectos section {
-  display: flex; }
-  .proyectos section div {
-    width: 65%; }
-    .proyectos section div p {
-      font-weight: 300;
-      font-size: 16px;
-      color: black; }
-    .proyectos section div button {
-      align-items: center;
-      font-weight: 600;
-      font-size: 14px;
-      background-color: #00bd45;
-      color: white;
-      border-radius: 6px;
-      border: 0px;
-      padding: 6px;
-      width: 140px; }
-  .proyectos section img {
-    width: 35%; }
-
-main .contacto {
-  display: flex;
-  justify-content: space-between; }
-  main .contacto .formulario {
-    width: 600px;
-    display: flex;
-    flex-direction: column; }
-    main .contacto .formulario p {
-      font-weight: 300;
-      font-size: 16px;
-      color: black; }
-    main .contacto .formulario form div {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px; }
-      main .contacto .formulario form div label {
-        font-weight: 300;
+    .institucional .entidades div a {
+      text-decoration: none; }
+      .institucional .entidades div a h3 {
         font-size: 16px;
-        color: black;
-        margin-bottom: 5px; }
-      main .contacto .formulario form div .button {
+        font-weight: 600;
+        color: white;
+        margin: 20px;
+        transition-timing-function: ease-in;
+        transition-duration: 1s; }
+        .institucional .entidades div a h3:hover {
+          transform: scale(1.1);
+          color: #147043;
+          -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
+
+.proyectos h1 {
+  background-color: #147043;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+  justify-content: center;
+  padding: 50px 0px 50px 0px;
+  margin: 3px 0px 0px 0px; }
+
+.proyectos .proyectos-grid {
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: 600px 400px; }
+  .proyectos .proyectos-grid .grid-proyecto1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    background-color: #147043;
+    position: relative; }
+    .proyectos .proyectos-grid .grid-proyecto1 img {
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.8;
+      height: 600px; }
+    .proyectos .proyectos-grid .grid-proyecto1 div {
+      position: absolute;
+      bottom: 160px;
+      padding-left: 20px;
+      padding-right: 20px;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      display: flex;
+      flex-direction: column; }
+      .proyectos .proyectos-grid .grid-proyecto1 div h2 {
+        color: white; }
+      .proyectos .proyectos-grid .grid-proyecto1 div p {
+        visibility: hidden; }
+      .proyectos .proyectos-grid .grid-proyecto1 div button {
+        visibility: hidden;
+        align-self: center; }
+      .proyectos .proyectos-grid .grid-proyecto1 div:hover p {
+        visibility: visible;
+        color: white;
+        text-align: center; }
+      .proyectos .proyectos-grid .grid-proyecto1 div:hover button {
+        visibility: visible;
         font-weight: 600;
         font-size: 14px;
         background-color: #00bd45;
@@ -192,38 +326,284 @@ main .contacto {
         border-radius: 6px;
         border: 0px;
         padding: 6px;
-        width: 140px; }
-  main .contacto .imagen img {
-    width: 300px; }
+        width: 140px;
+        transition-duration: 1s;
+        transition-timing-function: ease-in; }
+        .proyectos .proyectos-grid .grid-proyecto1 div:hover button:hover {
+          background-color: #147043; }
+  .proyectos .proyectos-grid .grid-proyecto2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: #147043;
+    position: relative; }
+    .proyectos .proyectos-grid .grid-proyecto2 img {
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.8;
+      height: 400px; }
+    .proyectos .proyectos-grid .grid-proyecto2 div {
+      position: absolute;
+      bottom: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      display: flex;
+      flex-direction: column; }
+      .proyectos .proyectos-grid .grid-proyecto2 div h2 {
+        color: white;
+        font-size: 20px; }
+      .proyectos .proyectos-grid .grid-proyecto2 div p {
+        visibility: hidden; }
+      .proyectos .proyectos-grid .grid-proyecto2 div button {
+        visibility: hidden;
+        align-self: center; }
+      .proyectos .proyectos-grid .grid-proyecto2 div:hover p {
+        visibility: visible;
+        color: white;
+        text-align: center; }
+      .proyectos .proyectos-grid .grid-proyecto2 div:hover button {
+        visibility: visible;
+        font-weight: 600;
+        font-size: 14px;
+        background-color: #00bd45;
+        color: white;
+        border-radius: 6px;
+        border: 0px;
+        padding: 6px;
+        width: 140px;
+        transition-duration: 1s;
+        transition-timing-function: ease-in; }
+        .proyectos .proyectos-grid .grid-proyecto2 div:hover button:hover {
+          background-color: #147043; }
+  .proyectos .proyectos-grid .grid-proyecto3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #147043;
+    position: relative; }
+    .proyectos .proyectos-grid .grid-proyecto3 img {
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.8;
+      height: 400px; }
+    .proyectos .proyectos-grid .grid-proyecto3 div {
+      position: absolute;
+      bottom: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      display: flex;
+      flex-direction: column; }
+      .proyectos .proyectos-grid .grid-proyecto3 div h2 {
+        color: white;
+        font-size: 20px; }
+      .proyectos .proyectos-grid .grid-proyecto3 div p {
+        visibility: hidden; }
+      .proyectos .proyectos-grid .grid-proyecto3 div button {
+        visibility: hidden;
+        align-self: center; }
+      .proyectos .proyectos-grid .grid-proyecto3 div:hover p {
+        visibility: visible;
+        color: white;
+        text-align: center; }
+      .proyectos .proyectos-grid .grid-proyecto3 div:hover button {
+        visibility: visible;
+        font-weight: 600;
+        font-size: 14px;
+        background-color: #00bd45;
+        color: white;
+        border-radius: 6px;
+        border: 0px;
+        padding: 6px;
+        width: 140px;
+        transition-duration: 1s;
+        transition-timing-function: ease-in; }
+        .proyectos .proyectos-grid .grid-proyecto3 div:hover button:hover {
+          background-color: #147043; }
+  .proyectos .proyectos-grid .grid-proyecto4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-color: #147043;
+    position: relative; }
+    .proyectos .proyectos-grid .grid-proyecto4 img {
+      object-fit: cover;
+      width: 100%;
+      opacity: 0.8;
+      height: 400px; }
+    .proyectos .proyectos-grid .grid-proyecto4 div {
+      position: absolute;
+      bottom: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      display: flex;
+      flex-direction: column; }
+      .proyectos .proyectos-grid .grid-proyecto4 div h2 {
+        color: white;
+        font-size: 20px; }
+      .proyectos .proyectos-grid .grid-proyecto4 div p {
+        visibility: hidden; }
+      .proyectos .proyectos-grid .grid-proyecto4 div button {
+        visibility: hidden;
+        align-self: center; }
+      .proyectos .proyectos-grid .grid-proyecto4 div:hover p {
+        visibility: visible;
+        color: white;
+        text-align: center; }
+      .proyectos .proyectos-grid .grid-proyecto4 div:hover button {
+        visibility: visible;
+        font-weight: 600;
+        font-size: 14px;
+        background-color: #00bd45;
+        color: white;
+        border-radius: 6px;
+        border: 0px;
+        padding: 6px;
+        width: 140px;
+        transition-duration: 1s;
+        transition-timing-function: ease-in; }
+        .proyectos .proyectos-grid .grid-proyecto4 div:hover button:hover {
+          background-color: #147043; }
 
-main section .editoriales div {
-  border: 0px;
-  background-color: #147043;
-  width: 300px;
-  height: 410px;
+main h1 {
+  margin: 20px; }
+
+main .contacto {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 5px; }
-  main section .editoriales div img {
-    height: 300px;
-    width: 300px; }
-  main section .editoriales div h3 {
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 10px; }
-  main section .editoriales div .boton img {
-    width: 24px;
-    height: 24px; }
+  justify-content: space-between; }
+  main .contacto .formulario {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px; }
+    main .contacto .formulario h2 {
+      align-self: flex-start;
+      margin: 10px 0px; }
+    main .contacto .formulario p {
+      font-weight: 300;
+      font-size: 16px;
+      color: black;
+      width: 600px; }
+    main .contacto .formulario form {
+      width: 600px; }
+      main .contacto .formulario form div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px; }
+        main .contacto .formulario form div label {
+          font-weight: 300;
+          font-size: 16px;
+          color: black;
+          margin-bottom: 5px; }
+        main .contacto .formulario form div .button {
+          font-weight: 600;
+          font-size: 14px;
+          background-color: #00bd45;
+          color: white;
+          border-radius: 6px;
+          border: 0px;
+          padding: 6px;
+          width: 140px;
+          transition-duration: 0.5s; }
+          main .contacto .formulario form div .button:hover {
+            background-color: #147043; }
+  main .contacto .imagen {
+    width: 29%;
+    margin-right: 20px; }
+    main .contacto .imagen img {
+      width: 100%;
+      object-fit: cover; }
 
-main .portales div {
-  justify-content: flex-start; }
-  main .portales div a h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
+main .nov-title {
+  background-color: #147043;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+  justify-content: center;
+  padding: 50px 0px 50px 0px;
+  margin: 3px 0px 0px 0px; }
+
+main section {
+  margin: 20px 0px; }
+  main section h2 {
+    margin: 20px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px; }
+  main section .editoriales {
+    justify-content: space-around;
+    margin: 20px; }
+    main section .editoriales div {
+      border: 0px;
+      background-color: #147043;
+      border-radius: 15px;
+      width: 320px;
+      height: 320px;
+      position: relative;
+      margin: 10px;
+      transition-timing-function: ease-in;
+      transition-duration: 1s; }
+      main section .editoriales div img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px; }
+      main section .editoriales div h3 {
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 37px 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #147043;
+        width: 100%;
+        height: 90px;
+        margin: 0;
+        border-radius: 0px 0px 15px 15px; }
+      main section .editoriales div a img {
+        height: 40px;
+        width: 40px;
+        background-color: #147043;
+        position: absolute;
+        bottom: 25px;
+        right: 10px; }
+      main section .editoriales div:hover {
+        transform: scale(1.1);
+        -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
+
+main .portales {
+  background-color: #00bd45;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px 0px;
+  -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
+  main .portales h2 {
+    color: white;
+    margin-bottom: 30px; }
+  main .portales div {
+    justify-content: center;
     margin: 10px; }
+    main .portales div a {
+      text-decoration: none; }
+      main .portales div a h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        margin: 10px;
+        transition-timing-function: ease-in;
+        transition-duration: 1s; }
+        main .portales div a h3:hover {
+          transform: scale(1.1);
+          color: #147043;
+          -webkit-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 21px -10px rgba(0, 0, 0, 0.75); }
 
 .grid-container {
   display: grid;
@@ -241,40 +621,47 @@ main .portales div {
     margin: 5px; }
     .grid-container .datos img {
       height: 50px;
-      width: 135px; }
+      width: 135px;
+      margin-top: 10px; }
     .grid-container .datos div {
-      justify-content: space-around;
+      justify-content: flex-start;
       height: 100%;
       width: 100%; }
       .grid-container .datos div a img {
         height: 50px;
-        width: 50px; }
+        width: 50px;
+        margin-right: 30px; }
   .grid-container .center {
     grid-area: center;
     display: flex;
     flex-direction: column;
-    align-content: flex-start; }
+    align-content: flex-start;
+    margin-top: 10px; }
     .grid-container .center h3 {
       font-weight: 700;
       font-size: 20px;
       margin-left: 10px; }
     .grid-container .center ul {
-      list-style: none; }
+      list-style: none;
+      padding: 10px; }
       .grid-container .center ul li a {
         text-decoration: none;
         font-size: 10 px;
         font-weight: 500;
-        color: white; }
+        color: white;
+        padding-bottom: 5px; }
   .grid-container .ubicacion {
     grid-area: ubicacion;
     flex-direction: column;
     align-content: space-around;
-    margin: 5px; }
+    justify-content: flex-start;
+    margin-top: 10px; }
     .grid-container .ubicacion iframe {
-      margin: 5px 0px 5px 0px; }
+      margin-bottom: 5px; }
     .grid-container .ubicacion p {
       font-size: 10 px;
       font-weight: 500;
+      margin-bottom: 5px;
       color: white; }
   .grid-container .derechos {
     grid-area: derechos;
@@ -283,35 +670,125 @@ main .portales div {
     .grid-container .derechos p {
       font-size: 10 px;
       font-weight: 500;
-      color: white; }
+      color: white;
+      padding: 10px;
+      margin: 0px; }
 
 /*----media querys----*/
-@media screen and (max-width: 950px) {
-  .formulario {
-    width: 60%; } }
-
-@media screen and (max-width: 860px) {
-  main .grid-container .video iframe {
-    width: 280px;
-    height: 157.5px; }
+@media screen and (max-width: 1170px) {
+  .intro .carousel-inner {
+    height: 400px; }
+  .grid-container3 .video iframe {
+    width: 450px;
+    height: 260px; }
   .texto h2 {
     font-weight: 800;
     font-size: 20px; }
   .texto p {
-    font-weight: 300;
-    font-size: 12px;
-    color: black; }
+    font-size: 12px; }
   .texto button {
     font-weight: 500;
     font-size: 12px;
-    background-color: #00bd45;
-    color: white;
-    border-radius: 6px;
-    border: 0px;
     padding: 8px;
     width: 140px; }
-  .formulario {
+  .institucional .mesaejecutiva-grid {
+    grid-template-rows: repeat(3, 200px); }
+    .institucional .mesaejecutiva-grid div {
+      width: 230px;
+      height: 200px; }
+    .institucional .mesaejecutiva-grid .card-invisible {
+      grid-column: span 1;
+      grid-row: span 1;
+      border: 0px;
+      visibility: hidden; } }
+
+@media screen and (max-width: 1000px) {
+  main .grid-container3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    column-gap: 0px;
+    row-gap: 0px;
+    grid-template-areas: none; }
+    main .grid-container3 .video {
+      margin-left: 0px; }
+      main .grid-container3 .video iframe {
+        width: 750px;
+        height: 440px; }
+    main .grid-container3 .texto {
+      margin-left: 0px; }
+  main .contacto .formulario {
+    width: 60%; }
+    main .contacto .formulario p {
+      width: 500px; }
+    main .contacto .formulario form {
+      width: 500px; }
+  main .contacto .imagen {
+    width: 39%; }
+  .proyectos .proyectos-grid .grid-proyecto2 div {
+    bottom: 40px; }
+    .proyectos .proyectos-grid .grid-proyecto2 div h2 {
+      font-weight: 700;
+      font-size: 16px; }
+    .proyectos .proyectos-grid .grid-proyecto2 div:hover p {
+      font-size: 14px; }
+  .proyectos .proyectos-grid .grid-proyecto3 div {
+    bottom: 40px; }
+    .proyectos .proyectos-grid .grid-proyecto3 div h2 {
+      font-weight: 700;
+      font-size: 16px; }
+    .proyectos .proyectos-grid .grid-proyecto3 div:hover p {
+      font-size: 14px; }
+  .proyectos .proyectos-grid .grid-proyecto4 div {
+    bottom: 40px; }
+    .proyectos .proyectos-grid .grid-proyecto4 div h2 {
+      font-weight: 700;
+      font-size: 16px; }
+    .proyectos .proyectos-grid .grid-proyecto4 div:hover p {
+      font-size: 14px; } }
+
+@media screen and (max-width: 860px) {
+  .institucional .mesaejecutiva-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 280px); }
+    .institucional .mesaejecutiva-grid div {
+      grid-column: span 1;
+      grid-row: span 1;
+      width: 320px;
+      height: 280px; }
+    .institucional .mesaejecutiva-grid .card-invisible {
+      visibility: hidden;
+      display: none; }
+  main .contacto .formulario {
     width: 50%; }
+    main .contacto .formulario p {
+      width: 400px; }
+    main .contacto .formulario form {
+      width: 400px; }
+  main .contacto .imagen {
+    width: 49%; }
+  .proyectos .proyectos-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 400px); }
+    .proyectos .proyectos-grid .grid-proyecto1 {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+      .proyectos .proyectos-grid .grid-proyecto1 div {
+        bottom: 40px; }
+        .proyectos .proyectos-grid .grid-proyecto1 div h2 {
+          font-weight: 700;
+          font-size: 16px; }
+        .proyectos .proyectos-grid .grid-proyecto1 div:hover p {
+          font-size: 14px; }
+    .proyectos .proyectos-grid .grid-proyecto2 {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    .proyectos .proyectos-grid .grid-proyecto3 {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    .proyectos .proyectos-grid .grid-proyecto4 {
+      grid-column: 1/2;
+      grid-row: 4/5; }
   /*foooter*/
   .grid-container {
     display: grid;
@@ -331,13 +808,35 @@ main .portales div {
   .derechos p {
     padding-top: 10px; } }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 780px) {
+  main .intro .carousel-inner {
+    height: 300px; }
+  main .grid-container3 .video {
+    margin-left: 0px; }
+    main .grid-container3 .video iframe {
+      width: 500px;
+      height: 300px; }
+  main .contacto .formulario {
+    width: 100%; }
+    main .contacto .formulario p {
+      width: 100%; }
+    main .contacto .formulario form {
+      width: 100%; }
+  main .contacto .imagen {
+    visibility: hidden;
+    display: none; } }
+
+@media screen and (max-width: 600px) {
+  .intro {
+    height: 240px; }
   .formulario {
     width: 100%; }
   .imagen {
     display: none; } }
 
 @media screen and (max-width: 560px) {
+  main .intro {
+    height: 200px; }
   main .grid-container3 {
     display: grid;
     grid-template-columns: 1fr;
@@ -346,8 +845,8 @@ main .portales div {
     row-gap: 0px;
     grid-template-areas: none; }
     main .grid-container3 .video iframe {
-      width: 350px;
-      height: 206px; }
+      width: 360px;
+      height: 200px; }
     main .grid-container3 .texto {
       margin-left: 0px; }
       main .grid-container3 .texto h2 {
@@ -365,33 +864,43 @@ main .portales div {
         border-radius: 6px;
         border: 0px;
         padding: 8px;
-        width: 140px; } }
+        width: 140px; }
+  main .title-index {
+    font-weight: 700;
+    font-size: 30px; } }
 
 @media screen and (max-width: 400px) {
-  /*foooter*/
   .grid-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 20% 50% 10%;
+    grid-template-rows: 108px;
     grid-template-areas: "datos" "center" "ubicacion" "derechos"; }
-  .datos div {
-    justify-content: flex-start;
-    padding: 5px; }
-  .datos img {
-    height: 38px;
-    width: 103px; }
-  .datos div a img {
-    height: 40px;
-    width: 40px; }
-  .center {
-    padding: 5px;
-    margin: 0px; }
-  .center h3 {
-    font-size: 16px; }
-  .ubicacion {
-    padding: 5px;
-    align-content: flex-start; }
-  .ubicacion p {
-    font-size: 12px; }
-  .derechos p {
-    padding-top: 5px;
-    font-size: 12px; } }
+    .grid-container .datos {
+      height: 108px; }
+      .grid-container .datos img {
+        height: 38px;
+        width: 103px; }
+      .grid-container .datos div {
+        justify-content: flex-start;
+        height: 60px; }
+        .grid-container .datos div a img {
+          height: 40px;
+          width: 40px;
+          margin: 10px; }
+    .grid-container .center {
+      padding: 5px;
+      margin-top: 10px; }
+      .grid-container .center h3 {
+        font-size: 16px; }
+      .grid-container .center ul {
+        margin: 0px; }
+    .grid-container .ubicacion {
+      padding: 5px;
+      align-content: flex-start; }
+      .grid-container .ubicacion iframe {
+        margin: 10px; }
+      .grid-container .ubicacion p {
+        font-size: 12px;
+        margin: 10px; }
+    .grid-container .derechos p {
+      padding-top: 5px;
+      font-size: 12px; } }

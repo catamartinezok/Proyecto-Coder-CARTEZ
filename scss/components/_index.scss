@@ -1,6 +1,17 @@
 main{
+    .title-index{
+        background-color: $color-principal;
+        color: $color-texto-contraste;
+        font-weight: 800;
+        font-size: 40px;
+        @extend %flex-wrap;
+        justify-content: center;
+        padding: 50px 0px 50px 0px;
+        margin: 0px;
+    }
     .grid-container3{
-        @include grid(grid,0.5fr 1fr, 1fr, 0px, 0px,none);
+        @include grid(grid,1fr 1fr, 1fr, 0px, 0px,none);
+        margin: 20px;
         .video{
             iframe{
                 width: 560px;
@@ -11,10 +22,16 @@ main{
             flex-direction: column;
             margin-left: 20px;
             @extend %flex-wrap;
+            justify-content: center;
+            h2{
+                text-align: start;
+                margin:0px 0px 10px 0px;
+            }
             p{
                 font-weight: 300;
                 font-size: 16px;
                 color: $color-texto-default;
+                margin-bottom: 10px;
             }
             button{
                 font-weight: 600;
@@ -25,38 +42,70 @@ main{
                 border: 0px;
                 padding: 10px;
                 width: 180px;
+                transition-duration: 0.5s;
+                &:hover{
+                    background-color: $color-principal;
+                }
             }
         }
     }
     .novedades{
         @extend %flex-wrap;
         flex-direction: column;
+        h2{
+            align-self: center;
+            margin: 20px;
+            color: $color-principal;
+            font-weight: 800;
+            font-size: 40px;
+        }
         div{
             @extend %flex-wrap;
             justify-content: space-around;
+            margin: 20px;
             div{
                 border: 0px;
                 background-color: $color-principal;
-                width: 300px;
-                height: 340px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                border-radius: 15px;
+                width: 320px;
+                height: 280px;
+                position: relative;
+                transition-timing-function: ease-in;
+                transition-duration: 1s;
                 img{
-                    width: 300px;
-                    height: 200px;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
                 }
                 h3{
                     font-weight: 600;
                     font-size: 16px;
                     color: $color-texto-contraste;
-                    padding: 10px;
+                    padding: 22px 10px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $color-principal;
+                    width: 100%;
+                    height: 60px;
+                    margin: 0;
+                    border-radius: 0px 0px 15px 15px ;
                 }
                 a{
                     img{
-                        height: 24px;
-                        width: 24px;
+                        height: 40px;
+                        width: 40px;
+                        background-color: $color-principal;
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
                     }
+                }
+                &:hover{
+                    transform: scale(1.1);
+                    -webkit-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
+                    box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
                 }
             }
         }

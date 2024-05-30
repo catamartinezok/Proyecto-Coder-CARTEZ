@@ -11,10 +11,9 @@ box-sizing: border-box;
 
 /*generales main*/
 main{
-    margin:20px;
     h1{
         color: $color-principal;
-        font-weight: 900;
+        font-weight: 800;
         font-size: 40px;
     }
     h2{
@@ -26,6 +25,7 @@ main{
         width: 100%;
     }
 }
+
 
 /*Modificaciones de bootstrap*/
 /*-Header-*/
@@ -47,24 +47,13 @@ main{
 .navbar-toggler-icon{
     color: $color-texto-contraste;
 }
-/*-Institucional-*/
-.card-img-top{
-    height: 100%;
-    object-fit: cover;
-}
-.presidente{
-    height: 100%;
-}
-.card-title{
-    font-weight: 800;
-    color: $color-principal;
-}
-.card-text{
-    font-weight: 400;
-    color: $color-texto-default;    
-}
-.card-invisible{
-    visibility: hidden;
+/*Index*/
+.intro{
+    .carousel-inner{
+        width: 100%;
+        height: 600px;
+        background-color: $color-principal;
+        }
 }
 
 /*Mixins*/
